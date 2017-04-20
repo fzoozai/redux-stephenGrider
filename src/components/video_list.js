@@ -2,6 +2,8 @@ import React from 'react';
 import VideoListItem from './video_list_item';
 
 const VideoList = (props) => {
+
+    // use .map instead of iterating through an array --> helper functions ES6
     const videoItems = props.videos.map((video) => {
         return <VideoListItem video = { video }/>
     });
