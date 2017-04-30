@@ -5,7 +5,12 @@ const VideoList = (props) => {
 
     // use .map instead of iterating through an array --> helper functions ES6
     const videoItems = props.videos.map((video) => {
-        return <VideoListItem key={video.etag} video = { video }/>
+        return (
+            <VideoListItem
+                onVideoSelect={props.onVideoSelect}
+                key={video.etag}
+                video = { video } />
+        );
     });
 
     return (
